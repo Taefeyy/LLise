@@ -1,0 +1,432 @@
+/* Commentaire */
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro|Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Advent Pro', sans-serif;
+    padding: 0;
+    margin: 0;
+    width:100%;
+}
+
+li{
+    list-style-type: none;
+    float:left;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.grid-container {
+    padding: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow:dense;
+    counter-reset: albumList;
+    background-color: rgb(229, 204, 197);
+  }
+
+@media screen and (max-width: 49.5em) {
+    li, a, button, nav{
+        display: none;
+    }
+
+.grid-container {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.item{
+    display: flex;
+    aspect-ratio: auto;
+    justify-content: center;
+}
+
+}
+
+
+/* ----------------------- 683 ~ 1023 ----------------------- */
+  
+@media screen and (min-width: 49.5625em) and (max-width: 63.99875em) {
+
+.dropdown, .little_lise, .feuillage, .nav_links_left, .nav_links_right{
+    display: none;
+}
+
+.publication{
+    display: flex;
+    justify-content: center;
+    background: rgb(229, 204, 197);
+    padding-top: 1%;
+}
+
+.item {
+    aspect-ratio: 1;
+    /* background: #ccc; */
+    display: flex;
+  }
+  
+/* Number */
+.item:before {
+counter-increment: albumList;
+margin: auto;
+font-size: 40px;
+color: #000000;
+}
+
+nav{
+    overflow:visible;
+    display: inline-flex;
+    width: 100%;
+    height: 52px;
+    background: rgb(229, 204, 197);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    padding: 0;
+}
+
+.little_lise_640_1023{
+    font-family: 'Allura', sans-serif;
+    font-size: 1.6em;
+    width: 100px;
+    height: 55%;
+    text-decoration-line: underline;
+    margin: 0;
+}
+
+.button_left,.button_right{
+    background-color: rgb(229, 204, 197);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.button_left{
+    min-height: 10%;
+    margin: 0px 40px;
+}
+
+.button_right{
+    min-height: 10%;
+    margin: 0px 40px;
+}
+
+#imagePrincipale{
+    padding-top: 60px;
+    background: url(images/fond.jpg) no-repeat fixed 50% 50%;
+    background-size: cover;
+    height: 300px;
+}
+
+h1{
+    font-family: 'Allura', cursive;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 2.5em;
+    margin-top: 0px;
+    padding-top: 80px;
+    text-shadow: 1px 3px 2px black;
+}
+
+#premierTrait{
+    height: 1px;
+    width: 25%;
+    background-color: #fffae1;
+    margin: -3px auto;
+    box-shadow: 1px 3px 2px black; /* Text shadow generator pour avoir une idée des valeurs à mettre dans l'ombrage */
+}
+
+h3{
+    font-family: 'Allura', cursive;
+    text-align: center;
+    color:antiquewhite;
+    font-size: 1.7em;
+    text-shadow: 1px 3px 2px black;
+}
+
+h4{
+    font-family: 'Allura', cursive;
+    text-align: center;
+    margin: 0% 0%;
+    padding-top: 2%;
+    color:black;
+    font-size: 1.5em;
+    text-shadow: 1px 3px 2px white;
+    background-color: rgb(229, 204, 197);
+}
+
+h5{
+    font-family: 'Allura', cursive;
+    text-align: center;
+    margin: 0% 0%;
+    color:black;
+    font-size: 1.5em;
+    text-shadow: 1px 3px 2px white;
+    background-color: rgb(229, 204, 197);
+}
+
+
+
+
+
+.dropdown_max_639 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown_content_max_639 {
+    display: none;
+    position:absolute;
+    left:auto;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:1;
+}
+
+.dropdown_content_max_639 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+  /* Show the dropdown menu on hover */
+.dropdown_max_639:hover .dropdown_content_max_639 {
+    display:block;
+}
+
+.dropdown_content_max_639 a:hover {background-color: #f1f1f1}
+
+.grid-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+}
+
+
+/* ----------------------- 1024+ ----------------------- */
+
+@media print, screen and (min-width: 64em) {
+
+/* NAVBAR */
+
+nav{
+    overflow:visible;
+    display: flex;
+    width: 100%;
+    height: 5%;
+    background: rgb(229, 204, 197);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.partie_640_1023,.dropdown_max_639,.feuillage_640_1023,.little_lise_640_1023,.button_left,.button_right{
+    display:none;
+}
+
+.publication{
+    display: flex;
+    justify-content: center;
+    background: rgb(229, 204, 197);
+    padding-top: 1%;
+}
+
+.item {
+    aspect-ratio: 1;
+    /* background: #ccc; */
+    display: flex;
+  }
+  
+/* Number */
+.item:before {
+counter-increment: albumList;
+margin: auto;
+font-size: 40px;
+color: #000000;
+}
+
+.little_lise{
+    font-family: 'Allura', sans-serif;
+    font-size: 1.8em;
+    width: 100px;
+    height: 100%;
+    text-decoration-line: underline;
+}
+
+#tissus, #nous_contacter, #vos_amours, #creations{
+    min-height: 10%;
+    margin: 0 40px;
+}
+
+#tissus a:hover, #nous_contacter a:hover, #vos_amours a:hover, #creations a:hover{
+    transform: scale(1.2);
+    transition: 0.5s ease-in-out;
+}
+
+.nav_links_left li:hover, .nav_links_right li:hover{
+    background-color: rgb(215, 176, 166);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position:fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+  /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display:block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+#imagePrincipale{
+    padding-top: 60px;
+    background: url(images/fond.jpg) no-repeat fixed 50% 50%;
+    background-size: cover;
+    height: 300px;
+}
+
+h1{
+    font-family: 'Allura', cursive;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 5em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-shadow: 1px 3px 2px black;
+}
+
+#premierTrait{
+    height: 1px;
+    width: 25%;
+    background-color: #fffae1;
+    margin: -3px auto;
+    box-shadow: 1px 3px 2px black; /* Text shadow generator pour avoir une idée des valeurs à mettre dans l'ombrage */
+}
+
+h3{
+    font-family: 'Allura', cursive;
+    text-align: center;
+    color:antiquewhite;
+    font-size: 2em;
+    text-shadow: 1px 3px 2px black;
+}
+
+/* --------- NOS CREATIONS ------------- */
+
+h4{
+    font-family: 'Allura', cursive;
+    text-align: center;
+    margin: 0% 0%;
+    padding-top: 2%;
+    color:black;
+    font-size: 1.5em;
+    text-shadow: 1px 3px 2px white;
+    background-color: rgb(229, 204, 197);
+}
+
+h5{
+    font-family: 'Allura', cursive;
+    text-align: center;
+    margin: 0% 0%;
+    color:black;
+    font-size: 1.5em;
+    text-shadow: 1px 3px 2px white;
+    background-color: rgb(229, 204, 197);
+}
+
+.grid-container {
+    grid-template-columns: repeat(4, 1fr);
+}
+.item:nth-child(10n + 1),
+.item:nth-child(10n + 10){
+    grid-area: span 2/span 2;
+}
+.item:nth-child(10n + 8) {
+    grid-column: 1;
+}
+.item:nth-child(10n + 9) {
+    grid-column: 2;
+}
+#absent{
+    display: none;
+}
+
+}
+
+/* --------------------------------- footer --------------------------------- */
+
+footer{
+    background-color: rgb(229, 204, 197);
+    width: 100%;
+    color:#fffae1;
+    padding: 10px 0 5px 0;
+    text-align: center;
+}
+
+#deuxiemeTrait{
+    height: 1px;
+    width: 75%;
+    background-color: #fffae1;
+    margin: 7px auto;
+}
+
+#copyrightEtIcons{
+    display: flex;
+    margin-bottom: 0px;
+    padding: 0 10%;
+}
+
+#copyright{
+    width: 50%;
+    font-size: 0.8em;
+    text-align: left;
+    color: #fffae1
+}
+
+#icons{
+    width: 50%;
+    text-align: right;
+}
+
+#icons a{
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 0.8em;
+    color: #fffae1
+}
+
+#icons a:hover{
+    transform: scale(1.5);
+    transition: 0.1s ease-in-out;
+}
